@@ -8,7 +8,7 @@
     "build": "storybook build",
     "test": "echo \"No tests (docs)\"",
     "typecheck": "tsc -p tsconfig.json",
-    "chromatic": "chromatic --exit-zero-on-changes --only-changed"
+    "chromatic": "chromatic --exit-zero-on-changes --only-changed --build-script-name=build"
   },
   "dependencies": {
     "@matcha-ui/components": "workspace:*",
