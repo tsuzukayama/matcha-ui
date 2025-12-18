@@ -28,17 +28,31 @@ jobs:
       - name: Test
         run: pnpm -r test
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: components-dist
+          path: packages/components/dist
+          if-no-files-found: error      
+
   chromatic:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     needs: build_test
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      
       - uses: actions/setup-node@v4
         with:
           node-version: 20.19.3
           cache: pnpm
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: components-dist
+          path: packages/components/dist
 
       - name: Enable pnpm via Corepack
         run: corepack enable
