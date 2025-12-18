@@ -1,0 +1,24 @@
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+
+@layer base {
+  :root {
+    --suzuka-background: 145 181 0;
+    --suzuka-foreground: 243 244 246;
+  }
+
+  .dark {
+    --suzuka-background: 243 244 246;
+    --suzuka-foreground: 17 24 39;
+  }
+}
+
+@layer components {
+  .suzuka-theme {
+    background: rgb(var(--suzuka-background));
+    color: rgb(var(--suzuka-foreground));
+  }
+}

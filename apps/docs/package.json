@@ -1,0 +1,31 @@
+{
+  "name": "@suzuka-ds/docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "test": "echo \"No tests (docs)\"",
+    "typecheck": "tsc -p tsconfig.json",
+    "chromatic": "chromatic --exit-zero-on-changes --only-changed"
+  },
+  "dependencies": {
+    "@suzuka-ds/components": "workspace:*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.12",
+    "@storybook/addon-essentials": "^8.6.15",
+    "@storybook/addon-interactions": "^8.6.15",
+    "@storybook/addon-links": "^8.6.15",
+    "@storybook/blocks": "^8.6.15",
+    "@storybook/react": "^8.6.15",
+    "@storybook/react-vite": "^8.6.15",
+    "storybook": "^8.6.15",
+    "chromatic": "^11.25.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "@suzuka-ds/components",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "pnpm run build:js && pnpm run build:css",
+    "build:js": "vite build",
+    "build:css": "tailwindcss -c tailwind.config.ts -i ./src/styles/index.css -o ./dist/styles.css",
+    "build:js:watch": "VITE_EMPTY_OUT_DIR=false vite build --watch",
+    "build:css:watch": "tailwindcss -c tailwind.config.ts -i ./src/styles/index.css -o ./dist/styles.css --watch",
+    "watch": "concurrently -n js,css -c blue,magenta \"pnpm run build:js:watch\" \"pnpm run build:css:watch\"",
+    "dev": "pnpm run watch",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.0",
+    "postcss": "^8.5.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "jsdom": "^25.0.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vite-plugin-dts": "^4.4.0",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.5"
+  }
+}
