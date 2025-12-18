@@ -1,7 +1,7 @@
 import type { Preview } from '@storybook/react';
 import React from 'react';
 
-import '@suzuka-ds/components/styles.css';
+import '@matcha-ui/components/styles.css';
 
 type ThemeMode = 'light' | 'dark';
 
@@ -30,7 +30,7 @@ const preview: Preview = {
       setThemeMode(ctx.globals.theme as ThemeMode);
       return React.createElement(
         'div',
-        { className: 'suzuka-theme', style: { padding: 24 } },
+        { className: 'matcha-theme', style: { padding: 24 } },
         React.createElement(Story),
       );
     },

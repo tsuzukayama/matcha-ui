@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '@suzuka-ds/components';
+import { Button } from '@matcha-ui/components';
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',

@@ -14,7 +14,7 @@ importers:
 
   apps/docs:
     dependencies:
-      '@suzuka-ds/components':
+      '@matcha-ui/components':
         specifier: workspace:*
         version: link:../../packages/components
       react:

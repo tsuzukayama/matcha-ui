@@ -1,13 +1,13 @@
-# Suzuka Design System
+# Matcha UI
 
-Monorepo for the Suzuka design system.
+Monorepo for Matcha UI.
 
 ## Requirements
 - Node >= 20
 - pnpm
 
 ## Repo layout
-- `packages/` — published packages (e.g. `@suzuka-ds/components`)
+- `packages/` — published packages (e.g. `@matcha-ui/components`)
 - `apps/` — apps (e.g. docs/Storybook)
 
 ## Commands

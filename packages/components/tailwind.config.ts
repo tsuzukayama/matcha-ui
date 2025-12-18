@@ -6,12 +6,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: 'rgb(var(--suzuka-background) / <alpha-value>)',
-        foreground: 'rgb(var(--suzuka-foreground) / <alpha-value>)',
+        background: 'rgb(var(--matcha-background) / <alpha-value>)',
+        foreground: 'rgb(var(--matcha-foreground) / <alpha-value>)',
       },
     },
   },
   plugins: [],
 } satisfies Config;
-
-
