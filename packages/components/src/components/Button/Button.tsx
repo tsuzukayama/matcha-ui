@@ -2,8 +2,8 @@ import * as React from 'react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-export type ButtonVariant = 'primary' | 'secondary';
-export type ButtonSize = 'sm' | 'md' | 'lg';
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outline' | 'link';
+export type ButtonSize = 'sm' | 'md' | 'lg' | 'icon';
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
@@ -25,11 +25,15 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               primary: 'bg-background text-foreground hover:bg-background/90',
               secondary:
                 'bg-foreground text-background ring-1 ring-background/20 hover:bg-foreground/5',
+              ghost: 'bg-transparent text-background hover:bg-transparent/10',
+              outline: 'border border-background text-background hover:bg-background/10',
+              link: 'text-background hover:text-background/80',
             }[variant],
             {
               sm: 'h-9 px-3 text-sm',
               md: 'h-10 px-4 text-sm',
               lg: 'h-11 px-5 text-base',
+              icon: 'h-10 w-10 p-0',
             }[size],
           ),
           className,
