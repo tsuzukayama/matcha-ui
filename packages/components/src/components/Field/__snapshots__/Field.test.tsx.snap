@@ -1,0 +1,80 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Field > matches snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-3"
+  >
+    <label
+      class="pl-4 text-sm font-medium text-background dark:text-foreground"
+      role="label"
+    >
+      Field Label
+    </label>
+    <input
+      class="rounded-full border border-background px-4 py-2 text-sm focus:border-background focus:outline-background focus:ring-0 focus:ring-offset-0"
+      placeholder="Input"
+    />
+    <p
+      class="pl-4 text-xs text-gray-500"
+    >
+      Field Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Field > matches snapshot with className 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-3 bg-red-500"
+  >
+    <label
+      class="pl-4 text-sm font-medium text-background dark:text-foreground"
+      role="label"
+    >
+      Field Label
+    </label>
+    <input
+      class="rounded-full border border-background px-4 py-2 text-sm focus:border-background focus:outline-background focus:ring-0 focus:ring-offset-0"
+      placeholder="Input"
+    />
+    <p
+      class="pl-4 text-xs text-gray-500"
+    >
+      Field Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Field > matches snapshot with error 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-3 text-red-500"
+  >
+    <label
+      class="pl-4 text-sm font-medium dark:text-foreground text-red-500"
+      role="label"
+    >
+      Field Label
+    </label>
+    <input
+      class="rounded-full border px-4 py-2 text-sm focus:ring-0 focus:ring-offset-0 border-red-500 focus:border-red-500 focus:outline-red-500"
+      placeholder="Input"
+    />
+    <p
+      class="pl-4 text-xs text-gray-500"
+      error="Field Error"
+    >
+      Field Description
+    </p>
+    <p
+      class="pl-4 text-xs text-red-500"
+      error="Field Error"
+    >
+      Field Error
+    </p>
+  </div>
+</div>
+`;

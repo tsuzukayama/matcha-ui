@@ -1,0 +1,85 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Card > matches snapshot 1`] = `
+<div>
+  <div
+    class="rounded-lg border border-background p-6 shadow-md dark:border-foreground"
+  >
+    <div
+      class="mb-6"
+    >
+      <h2
+        class="text-lg font-medium text-background dark:text-foreground"
+      >
+        Card header
+      </h2>
+    </div>
+    <div
+      class=""
+    >
+      Card content
+    </div>
+    <div
+      class="mt-6"
+    >
+      Card footer
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card > matches snapshot with children 1`] = `
+<div>
+  <div
+    class="rounded-lg border border-background p-6 shadow-md dark:border-foreground"
+  >
+    <div
+      class="mb-6"
+    >
+      <h2
+        class="text-lg font-medium text-background dark:text-foreground"
+      >
+        Card header
+      </h2>
+    </div>
+    <div
+      class=""
+    >
+      Card content
+    </div>
+    <div
+      class="mt-6"
+    >
+      Card footer
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card > matches snapshot with className 1`] = `
+<div>
+  <div
+    class="rounded-lg border border-background p-6 shadow-md dark:border-foreground bg-red-500"
+  >
+    <div
+      class="mb-6"
+    >
+      <h2
+        class="text-lg font-medium text-background dark:text-foreground"
+      >
+        Card header
+      </h2>
+    </div>
+    <div
+      class=""
+    >
+      Card content
+    </div>
+    <div
+      class="mt-6"
+    >
+      Card footer
+    </div>
+  </div>
+</div>
+`;

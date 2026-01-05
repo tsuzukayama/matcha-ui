@@ -1,0 +1,45 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button > matches snapshot 1`] = `
+<div>
+  <button
+    class="inline-flex items-center justify-center rounded-full font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30 disabled:pointer-events-none disabled:opacity-50 bg-background text-foreground hover:bg-background/90 h-10 px-4 text-sm"
+    type="button"
+  >
+    Click me
+  </button>
+</div>
+`;
+
+exports[`Button > matches snapshot with size 1`] = `
+<div>
+  <button
+    class="inline-flex items-center justify-center rounded-full font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30 disabled:pointer-events-none disabled:opacity-50 bg-background text-foreground hover:bg-background/90 h-9 px-3 text-sm"
+    type="button"
+  >
+    Click me
+  </button>
+</div>
+`;
+
+exports[`Button > matches snapshot with type 1`] = `
+<div>
+  <button
+    class="inline-flex items-center justify-center rounded-full font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30 disabled:pointer-events-none disabled:opacity-50 bg-background text-foreground hover:bg-background/90 h-10 px-4 text-sm"
+    type="submit"
+  >
+    Click me
+  </button>
+</div>
+`;
+
+exports[`Button > matches snapshot with variant 1`] = `
+<div>
+  <button
+    class="inline-flex items-center justify-center rounded-full font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30 disabled:pointer-events-none disabled:opacity-50 bg-background text-foreground hover:bg-background/90 h-10 px-4 text-sm"
+    type="button"
+  >
+    Click me
+  </button>
+</div>
+`;

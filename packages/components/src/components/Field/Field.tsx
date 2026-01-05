@@ -31,6 +31,7 @@ export type FieldLabelProps = React.ComponentProps<'label'> & {
 export const FieldLabel = ({ className, error, ...props }: FieldLabelProps) => {
   return (
     <label
+      role="label"
       className={twMerge(
         clsx('pl-4 text-sm font-medium text-background dark:text-foreground', className),
         error && 'text-red-500',

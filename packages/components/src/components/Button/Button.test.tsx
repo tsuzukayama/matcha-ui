@@ -19,6 +19,22 @@ describe('Button', () => {
 
     expect(onClick).toHaveBeenCalledTimes(1);
   });
+
+  //snpashot tests
+  it('matches snapshot', () => {
+    const { container } = render(<Button>Click me</Button>);
+    expect(container).toMatchSnapshot();
+  });
+  it('matches snapshot with variant', () => {
+    const { container } = render(<Button variant="primary">Click me</Button>);
+    expect(container).toMatchSnapshot();
+  });
+  it('matches snapshot with size', () => {
+    const { container } = render(<Button size="sm">Click me</Button>);
+    expect(container).toMatchSnapshot();
+  });
+  it('matches snapshot with type', () => {
+    const { container } = render(<Button type="submit">Click me</Button>);
+    expect(container).toMatchSnapshot();
+  });
 });
-
-
