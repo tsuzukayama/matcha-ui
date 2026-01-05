@@ -1,6 +1,7 @@
 import type { Preview } from '@storybook/react';
 import React from 'react';
 
+import '../src/tailwind.css';
 import '@matcha-ui/components/styles.css';
 
 type ThemeMode = 'light' | 'dark';
@@ -30,7 +31,7 @@ const preview: Preview = {
       setThemeMode(ctx.globals.theme as ThemeMode);
       return React.createElement(
         'div',
-        { className: 'matcha-theme', style: { padding: 24 } },
+        { className: 'matcha-theme', style: { padding: 24, backgroundColor: ctx.globals.theme === 'dark' ? '#2D2D30' : 'white' } },
         React.createElement(Story),
       );
     },
