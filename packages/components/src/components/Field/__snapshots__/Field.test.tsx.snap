@@ -7,12 +7,13 @@ exports[`Field > matches snapshot 1`] = `
   >
     <label
       class="pl-4 text-sm font-medium text-background dark:text-foreground"
-      role="label"
+      for="input"
     >
       Field Label
     </label>
     <input
       class="rounded-full border border-background px-4 py-2 text-sm focus:border-background focus:outline-background focus:ring-0 focus:ring-offset-0"
+      id="input"
       placeholder="Input"
     />
     <p
@@ -31,12 +32,13 @@ exports[`Field > matches snapshot with className 1`] = `
   >
     <label
       class="pl-4 text-sm font-medium text-background dark:text-foreground"
-      role="label"
+      for="input"
     >
       Field Label
     </label>
     <input
       class="rounded-full border border-background px-4 py-2 text-sm focus:border-background focus:outline-background focus:ring-0 focus:ring-offset-0"
+      id="input"
       placeholder="Input"
     />
     <p
@@ -55,12 +57,14 @@ exports[`Field > matches snapshot with error 1`] = `
   >
     <label
       class="pl-4 text-sm font-medium dark:text-foreground text-red-500"
-      role="label"
+      for="input"
     >
       Field Label
     </label>
     <input
+      aria-invalid="true"
       class="rounded-full border px-4 py-2 text-sm focus:ring-0 focus:ring-offset-0 border-red-500 focus:border-red-500 focus:outline-red-500"
+      id="input"
       placeholder="Input"
     />
     <p
@@ -70,8 +74,10 @@ exports[`Field > matches snapshot with error 1`] = `
       Field Description
     </p>
     <p
+      aria-live="polite"
       class="pl-4 text-xs text-red-500"
       error="Field Error"
+      role="alert"
     >
       Field Error
     </p>

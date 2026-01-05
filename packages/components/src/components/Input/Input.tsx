@@ -11,6 +11,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <input
         ref={ref}
+        aria-invalid={error ? true : undefined}
         className={twMerge(
           clsx(
             'rounded-full border border-background',

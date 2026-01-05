@@ -6,15 +6,15 @@ import { Input } from '../Input/Input';
 describe('Field', () => {
   const FieldComponent = (args: FieldProps) => (
     <Field {...args}>
-      <FieldLabel>Field Label</FieldLabel>
-      <Input placeholder="Input" />
+      <FieldLabel htmlFor="input">Field Label</FieldLabel>
+      <Input id="input" placeholder="Input" />
       <FieldDescription>Field Description</FieldDescription>
       {args.error && <FieldError>{args.error}</FieldError>}
     </Field>
   );
   it('renders children', () => {
     render(FieldComponent({}));
-    expect(screen.getByRole('label', { name: 'Field Label' })).toBeInTheDocument();
+    expect(screen.getByLabelText('Field Label')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('Input')).toBeInTheDocument();
     expect(screen.getByText('Field Description')).toBeInTheDocument();
   });

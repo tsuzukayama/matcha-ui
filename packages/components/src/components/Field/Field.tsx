@@ -31,7 +31,6 @@ export type FieldLabelProps = React.ComponentProps<'label'> & {
 export const FieldLabel = ({ className, error, ...props }: FieldLabelProps) => {
   return (
     <label
-      role="label"
       className={twMerge(
         clsx('pl-4 text-sm font-medium text-background dark:text-foreground', className),
         error && 'text-red-500',
@@ -54,7 +53,14 @@ FieldDescription.displayName = 'FieldDescription';
 export type FieldErrorProps = React.ComponentProps<'p'>;
 
 export const FieldError = ({ className, ...props }: FieldErrorProps) => {
-  return <p className={twMerge(clsx('pl-4 text-xs text-red-500', className))} {...props} />;
+  return (
+    <p
+      role="alert"
+      aria-live="polite"
+      className={twMerge(clsx('pl-4 text-xs text-red-500', className))}
+      {...props}
+    />
+  );
 };
 
 FieldError.displayName = 'FieldError';
