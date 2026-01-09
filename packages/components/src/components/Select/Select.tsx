@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import React, { useEffect } from 'react';
-import { useControllableState } from './useControllableState';
+import { useControllableState } from '../../hooks/useControllableState';
 import { ChevronDownIcon } from 'lucide-react';
 
 type SelectContextType = {

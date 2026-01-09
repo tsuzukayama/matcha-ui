@@ -7,18 +7,16 @@ const meta: Meta<typeof Select> = {
   component: Select,
   tags: ['autodocs'],
   render: (args) => (
-    <div style={{ marginTop: '100px' }}>
-      <Select {...args} className="w-40">
-        <SelectTrigger>
-          <span>Select</span>
-        </SelectTrigger>
-        <SelectContent>
-          <SelectOption value="1">Option 1</SelectOption>
-          <SelectOption value="2">Option 2</SelectOption>
-          <SelectOption value="3">Option 3</SelectOption>
-        </SelectContent>
-      </Select>
-    </div>
+    <Select {...args} className="w-40">
+      <SelectTrigger>
+        <span>Select</span>
+      </SelectTrigger>
+      <SelectContent>
+        <SelectOption value="1">Option 1</SelectOption>
+        <SelectOption value="2">Option 2</SelectOption>
+        <SelectOption value="3">Option 3</SelectOption>
+      </SelectContent>
+    </Select>
   ),
 };
 

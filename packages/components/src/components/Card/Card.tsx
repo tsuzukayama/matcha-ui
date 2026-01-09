@@ -5,7 +5,10 @@ export const Card = ({ className, ...props }: CardProps) => {
   return (
     <div
       className={twMerge(
-        clsx('rounded-lg border border-background p-6 shadow-md dark:border-foreground', className),
+        clsx(
+          'rounded-3xl border border-background p-6 shadow-md dark:border-foreground',
+          className,
+        ),
       )}
       {...props}
     />
