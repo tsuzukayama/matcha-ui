@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import React, { useEffect } from 'react';
 import { useControllableState } from './useControllableState';
+import { ChevronDownIcon } from 'lucide-react';
 
 type SelectContextType = {
   open?: boolean;
@@ -114,13 +115,15 @@ export type SelectOptionProps = React.ComponentProps<'div'> & {
 };
 
 export const SelectOption = ({ className, ...props }: SelectOptionProps) => {
-  const { onChange } = useSelect();
+  const { onChange, value } = useSelect();
+  const isSelected = value === props.value;
 
   return (
     <div
       className={twMerge(
         clsx(
           'relative flex h-9 w-full cursor-pointer items-center justify-between px-4 text-sm hover:bg-foreground/90',
+          isSelected && 'bg-foreground/90',
           className,
         ),
       )}
@@ -138,8 +141,12 @@ export const SelectTrigger = ({ className, ...props }: SelectTriggerProps) => {
   const { label } = useSelect();
 
   return (
-    <div className={twMerge(clsx('text-sm', className))} {...props}>
+    <div
+      className={twMerge(clsx('flex items-center justify-between text-sm', className))}
+      {...props}
+    >
       {label ?? props.children}
+      <ChevronDownIcon className="size-4 text-background" />
     </div>
   );
 };

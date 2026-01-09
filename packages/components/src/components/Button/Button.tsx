@@ -22,11 +22,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30',
             'disabled:pointer-events-none disabled:opacity-50',
             {
-              primary: 'bg-background text-foreground hover:bg-background/90',
+              primary: 'bg-background text-foreground hover:bg-background/90 hover:shadow-md',
               secondary:
-                'bg-foreground text-background ring-1 ring-background/20 hover:bg-foreground/5',
+                'bg-foreground text-background ring-1 ring-background/20 hover:bg-foreground/5 hover:shadow-md',
               ghost: 'bg-transparent text-background hover:bg-transparent/10',
-              outline: 'border border-background text-background hover:bg-background/10',
+              outline:
+                'border border-background text-background hover:bg-background/10 hover:shadow-md',
               link: 'text-background hover:text-background/80',
             }[variant],
             {
