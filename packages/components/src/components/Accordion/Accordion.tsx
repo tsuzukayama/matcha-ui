@@ -48,6 +48,7 @@ interface AccordionMultipleProps extends Omit<React.ComponentProps<'div'>, 'onCh
   value?: string[];
   defaultValue?: string[];
   onValueChange?: (value: string[]) => void;
+  collapsible?: boolean;
 }
 
 export type AccordionProps = AccordionSingleProps | AccordionMultipleProps;
@@ -101,7 +102,7 @@ export const Accordion = ({
     defaultValue: _defaultValue,
     onValueChange: _onValueChange,
     ...divProps
-  } = props as AccordionSingleProps & AccordionMultipleProps;
+  } = props;
 
   return (
     <AccordionContext.Provider value={{ value, onItemToggle, type, collapsible }}>
